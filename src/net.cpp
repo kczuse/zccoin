@@ -1209,15 +1209,15 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"zccoin.com", "seeds.zccoin.com"},
-    {"zccoin.org", "seed1.zccoin.org"},
-    {"zccoin.org", "seed2.zccoin.org"}
+    {"seed1.botpool.net", "seed1.botpool.net"},
+    {"seed2.botpool.net", "seed2.botpool.net"},
+    {"seed3.botpool.net", "seed3.botpool.net"}
 };
 
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("bitcoin-dnsseed");
+    RenameThread("zccoin-dnsseed");
 
     try
     {
